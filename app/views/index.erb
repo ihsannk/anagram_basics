@@ -1,0 +1,17 @@
+<div class="container">
+
+  <h3>Show a list of anagrams for your word</h3>
+
+  <form action="/" method='post'>
+    <input name="user_input" type="text" placeholder="Type here">
+    <input type="submit">
+  </form>
+
+  <p><%= @input %></p>
+  <ul>
+    <% @anagrams.each do |anagram| %>
+    <li><%= anagram.word %></li>
+    <% end %>
+  </ul>
+
+</div>
